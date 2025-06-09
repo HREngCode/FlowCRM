@@ -128,7 +128,7 @@ function NavigationMenu({ items }: { items: NavItem[] }) {
                 <SidebarMenuSub>
                   {item.subItems.map(subItem => (
                      <SidebarMenuSubItem key={subItem.label}>
-                       <Link href={subItem.href} legacyBehavior passHref>
+                       <Link href={subItem.href}>
                          <SidebarMenuSubButton isActive={pathname === subItem.href}>
                            {/* Sub-item icons can be simpler or omitted if not distinct enough */}
                            <span>{subItem.label}</span>
@@ -140,7 +140,7 @@ function NavigationMenu({ items }: { items: NavItem[] }) {
               )}
             </>
           ) : (
-            <Link href={item.href} legacyBehavior passHref>
+            <Link href={item.href}>
               <SidebarMenuButton isActive={pathname === item.href} tooltip={open ? undefined : item.label}>
                 <item.icon />
                 <span>{item.label}</span>
