@@ -1,0 +1,77 @@
+import type { Contact, Email } from '@/types';
+
+export const mockContacts: Contact[] = [
+  {
+    id: 'contact-1',
+    name: 'Alice Johnson',
+    email: 'alice.johnson@example.com',
+    phone: '555-0101',
+    company: 'Innovatech',
+    lastContacted: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),
+    source: 'Email Import',
+    avatarUrl: 'https://placehold.co/100x100.png',
+    notes: 'Interested in Q3 product updates.',
+  },
+  {
+    id: 'contact-2',
+    name: 'Bob Smith',
+    email: 'bob.smith@example.com',
+    phone: '555-0102',
+    company: 'Tech Solutions Ltd.',
+    lastContacted: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString(),
+    source: 'Manual Entry',
+    avatarUrl: 'https://placehold.co/100x100.png',
+  },
+  {
+    id: 'contact-3',
+    name: 'Carol White',
+    email: 'carol.white@example.com',
+    phone: '555-0103',
+    company: 'BizCorp',
+    lastContacted: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString(),
+    source: 'Email Import',
+    avatarUrl: 'https://placehold.co/100x100.png',
+    notes: 'Follow up regarding contract renewal.',
+  },
+];
+
+export const mockEmails: Email[] = [
+  {
+    id: 'email-1',
+    sender: 'Alice Johnson',
+    senderEmail: 'alice.johnson@example.com',
+    recipient: 'sales@flowcrm.com',
+    subject: 'Inquiry about Product X',
+    body: "Hello Team,\n\nI'm very interested in learning more about Product X. Could you please provide some details on its features and pricing?\n\nThanks,\nAlice Johnson\nInnovatech\n555-0101",
+    receivedAt: new Date(Date.now() - 1 * 60 * 60 * 1000).toISOString(),
+    contactId: 'contact-1',
+  },
+  {
+    id: 'email-2',
+    sender: 'David Brown (Prospect)',
+    senderEmail: 'david.brown@example.net',
+    recipient: 'support@flowcrm.com',
+    subject: 'Issue with my account',
+    body: 'Hi Support,\n\nI seem to be having trouble logging into my account. The password reset link is not working. This is quite frustrating as I need to access my data urgently.\n\nRegards,\nDavid Brown',
+    receivedAt: new Date(Date.now() - 3 * 60 * 60 * 1000).toISOString(),
+  },
+  {
+    id: 'email-3',
+    sender: 'Carol White',
+    senderEmail: 'carol.white@example.com',
+    recipient: 'info@flowcrm.com',
+    subject: 'Great Service!',
+    body: "Dear FlowCRM team,\n\nI just wanted to express my satisfaction with your platform. It's been incredibly helpful for managing my client interactions. Keep up the great work!\n\nBest,\nCarol White\nBizCorp\n+1-555-0103",
+    receivedAt: new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString(),
+    contactId: 'contact-3',
+  },
+   {
+    id: 'email-4',
+    sender: 'New Lead Inc.',
+    senderEmail: 'contact@newlead.com',
+    recipient: 'sales@flowcrm.com',
+    subject: 'Partnership Opportunity',
+    body: "Dear Sales Team,\n\nWe at New Lead Inc. are exploring potential partnerships with CRM providers like FlowCRM. We believe our services could complement your offerings. We'd love to schedule a call to discuss this further. Our main contact is John Doe at john.doe@newlead.com or (555) 123-4567.\n\nSincerely,\nThe New Lead Team",
+    receivedAt: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),
+  },
+];
