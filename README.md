@@ -1,5 +1,3 @@
-# Firebase Studio
+FlowCRM
 
-This is a NextJS starter in Firebase Studio.
-
-To get started, take a look at src/app/page.tsx.
+This was created with a NextJS starter in Firebase Studio.
